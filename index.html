@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eltűnő Számok - Kognitív Térérzékelő Játék</title>
+    <meta
+      name="description"
+      content="Téri-vizuális memória fejlesztő játék - jegyezd meg a számok helyét!"
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game" id="game">
+      <!-- Flash overlay -->
+      <div class="flash" id="flash" hidden></div>
+
+      <!-- Confetti -->
+      <div class="confetti-layer" id="confetti"></div>
+
+      <!-- Header -->
+      <div class="header">
+        <h1 class="title">Eltűnő Számok</h1>
+        <div class="stats">
+          <span>Szint: <span class="stat-level" id="level">1</span></span>
+          <span>Körök: <span class="stat-count" id="count">3</span></span>
+          <span class="last-chance" id="lastChance" hidden>⚠ Utolsó esély!</span>
+        </div>
+      </div>
+
+      <!-- Phase indicator -->
+      <div class="phase" id="phase"></div>
+
+      <!-- Game area -->
+      <div class="area" id="area">
+        <div class="shrink-bar" id="bar" hidden></div>
+      </div>
+
+      <!-- Game Over screen -->
+      <div class="game-over" id="gameOver" hidden>
+        <h2>Game Over</h2>
+        <p class="best">
+          Legjobb szint: <span id="bestLevel">1</span>
+        </p>
+        <p class="best-sub">(<span id="bestCount">3</span> kör sikeresen teljesítve)</p>
+        <button class="new-game" id="newGame" type="button">🔄 Új játék</button>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">Téri-vizuális memória fejlesztő játék</div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
